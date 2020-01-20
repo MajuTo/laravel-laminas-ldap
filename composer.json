@@ -1,0 +1,26 @@
+{
+    "name": "majuto/laravel-laminas-ldap",
+    "description": "Laminas Ldap implementation for Laravel",
+    "type": "library",
+    "require": {
+      "laminas/laminas-ldap": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "MajuTo\\LaravelLaminasLdap\\": "src/MajuTo/LaravelLaminasLdap/"
+        },
+      "files": [
+        "src/MajuTo/LaravelLaminasLdap/helpers.php"
+      ]
+    },"extra": {
+        "laravel": {
+            "providers": [
+                "MajuTo\\LaravelLaminasLdap\\LdapServiceProvider"
+            ],
+            "aliases": {
+                "Ldap": "MajuTo\\LaravelLaminasLdap\\Facades\\Ldap"
+            }
+        }
+    },
+    "license": "GPL-3.0-or-later"
+}
